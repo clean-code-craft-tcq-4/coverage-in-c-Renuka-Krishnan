@@ -7,7 +7,7 @@ AlertStatus classifyBreachAndAlert(AlertTarget alertTarget, BatteryCharacter bat
   BreachType BreachTypeData;
   AlertStatus alertStatus;
   
-  if((batteryChar.coolingType >= 0) && (batteryChar.coolingType <= 2)
+  if((batteryChar.coolingType >= 0) && (batteryChar.coolingType <= 2))
   {
     BreachTypeData = classifyTemperatureBreach(batteryChar.coolingType, temperatureInC);
     alertStatus = checkAndAlert(alertTarget, BreachTypeData);
