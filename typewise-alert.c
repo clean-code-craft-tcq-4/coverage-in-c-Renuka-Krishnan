@@ -15,7 +15,7 @@ AlertStatus classifyBreachAndAlert(AlertTarget alertTarget, BatteryCharacter bat
   else
   {
     BreachTypeData = UNKNOWN_BREACH;
-    alertStatus = UNKNOWN_BREACH;
+    alertStatus = UNKNOWN_BREACH_ALERT_FAILURE;
   }
   return(alertStatus);
  
