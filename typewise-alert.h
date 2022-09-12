@@ -30,7 +30,7 @@ typedef enum
 {
   ALERT_FAILURE,
   ALERT_SUCCESS,
-  UNKNOWN_BREACH_ALERT_FAILURE)
+  UNKNOWN_BREACH_ALERT_FAILURE
 }AlertStatus;
 
 void sendToController(BreachType BreachTypeData);
