@@ -24,31 +24,31 @@ TEST_CASE("infers the no breach according to the cooling limits and notify it vi
   REQUIRE(classifyBreachAndAlert(TO_EMAIL, BatteryAttribute, 45) == ALERT_SUCCESS);
 }
 
-TEST_CASE("infers the breach according to the cooling limits and send it to controller") 
+TEST_CASE("infers the breach according to the Hi Active cooling limits and send it to controller") 
 {
   BatteryCharacter BatteryAttribute = {HI_ACTIVE_COOLING, "Hi_Active_Cooling_High_Breach"};
   REQUIRE(classifyBreachAndAlert(TO_CONTROLLER, BatteryAttribute, 49) == ALERT_SUCCESS);
 }
 
-TEST_CASE("infers the breach according to the cooling limits and notify it via e-mail") 
+TEST_CASE("infers the breach according to the Med Active cooling limits and notify it via e-mail") 
 {
   BatteryCharacter BatteryAttribute = {MED_ACTIVE_COOLING, "Med_Active_Cooling_High_Breach"};
   REQUIRE(classifyBreachAndAlert(TO_EMAIL, BatteryAttribute, 43) == ALERT_SUCCESS);
 }
 
-TEST_CASE("infers the breach according to the cooling limits and send it to controller") 
+TEST_CASE("infers the breach according to the Med Active cooling limits and send it to controller") 
 {
   BatteryCharacter BatteryAttribute = {MED_ACTIVE_COOLING, "Med_Active_Cooling_Low_Breach"};
   REQUIRE(classifyBreachAndAlert(TO_CONTROLLER, BatteryAttribute, -5) == ALERT_SUCCESS);
 }
 
-TEST_CASE("infers the breach according to the cooling limits and send it to controller") 
+TEST_CASE("infers the breach according to the Passive cooling limits and send it to controller") 
 {
   BatteryCharacter BatteryAttribute = {PASSIVE_COOLING, "Low_Breach"};
   REQUIRE(classifyBreachAndAlert(TO_CONTROLLER, BatteryAttribute, -4) == ALERT_SUCCESS);
 }
 
-TEST_CASE("Infers the breach according to the cooling limits and notify it via e-mail") 
+TEST_CASE("Infers the breach according to the Passive cooling limits and notify it via e-mail") 
 {
   BatteryCharacter BatteryAttribute = {PASSIVE_COOLING, "High_Breach"};
   REQUIRE(classifyBreachAndAlert(TO_EMAIL, BatteryAttribute, 37) == ALERT_SUCCESS);
