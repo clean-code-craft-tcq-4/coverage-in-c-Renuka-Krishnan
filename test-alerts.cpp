@@ -57,5 +57,5 @@ TEST_CASE("Infers the breach according to the cooling limits and notify it via e
 TEST_CASE("Negative test case for unknown cooling type") 
 {
   BatteryCharacter BatteryAttribute = {(CoolingType)4, "Med_Active_Cooling_Low_Breach"};
-  REQUIRE(classifyBreachAndAlert(TO_EMAIL, BatteryAttribute, 40) == UNKNOWN_BREACH);
+  REQUIRE(classifyBreachAndAlert(TO_EMAIL, BatteryAttribute, 40) == UNKNOWN_BREACH_ALERT_FAILURE);
 }
